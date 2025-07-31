@@ -12,11 +12,7 @@ This `readme.md` file summarizes key networking concepts, Nmap scanning techniqu
       * [Nmap Scanning Techniques](https://www.google.com/search?q=%23nmap-scanning-techniques)
       * [Host Discovery](https://www.google.com/search?q=%23host-discovery)
       * [Service and OS Detection](https://www.google.com/search?q=%23service-and-os-detection)
-      * [Nmap Output Interpretation](https://www.google.com/search?q=%23nmap-output-interpretation)
-      * [Nmap Graphical User Interface (Zenmap)](https://www.google.com/search?q=%23nmap-graphical-user-interface-zenmap)
       * [Information Gathering Tools (`nslookup`, `whois`)](https://www.google.com/search?q=%23information-gathering-tools-nslookup-whois)
-3.  [Linux System Hacking: Password Reset](https://www.google.com/search?q=%233-linux-system-hacking-password-reset)
-
 -----
 
 ## 1\. Networking Fundamentals
