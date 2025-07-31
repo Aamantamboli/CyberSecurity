@@ -80,25 +80,6 @@ Nmap (Network Mapper) is a free and open-source utility for network discovery an
 | **OS Detection** | `nmap -O`    | Attempts to determine the operating system of the target host.                                          |
 | **Aggressive Scan** | `nmap -A`    | Enables OS detection, version detection, script scanning, and traceroute for a comprehensive scan. |
 
-### Nmap Output Interpretation
-
-Nmap scan reports provide crucial information, including:
-
-  * **Port States:**
-      * **Open:** An application is actively listening on this port.
-      * **Closed:** No application is listening, but the port is accessible.
-      * **Filtered:** A firewall or other security device is blocking the port, preventing Nmap from determining its state.
-  * **Service Versions:** Details about the software running on open ports.
-  * **OS Details:** Information about the target's operating system.
-  * **Network Distance:** How many hops away the target is.
-
-### Nmap Graphical User Interface (Zenmap)
-
-  * **Zenmap:** The official graphical user interface for Nmap, providing a visual way to configure and run scans, and analyze results.
-  * **Running as Root:** It is generally recommended to run Nmap (and Zenmap) as a root/administrator user to ensure full functionality and accurate results, especially for raw packet operations.
-  * **Advanced Scan Types:** Zenmap offers pre-defined profiles for various scan types, including "Intense Scan," "Intense Scan plus UDP," "Quick Scan," and "Slow Comprehensive Scan."
-  * **Output Filters & Host Details:** Zenmap allows filtering scan output and provides detailed host information like uptime, MAC address, and TCP sequence prediction.
-
 ### Information Gathering Tools (`nslookup`, `whois`)
 
 These command-line tools are vital for initial reconnaissance:
@@ -109,23 +90,3 @@ These command-line tools are vital for initial reconnaissance:
       * Example: `whois example.com`
 
 -----
-
-## 3\. Linux System Hacking: Password Reset
-
-This section describes a method for resetting a forgotten password on a Linux system by manipulating its boot parameters via the GRUB bootloader.
-
-**Steps to Reset Linux Password:**
-
-1.  **Restart the Linux System:** Initiate a reboot of your Linux machine.
-2.  **Access GRUB Interface:** During the boot sequence, quickly press the `e` key (or `Esc`/`Shift` if GRUB isn't immediately visible) to enter the GRUB edit mode.
-3.  **Edit Linux Boot Parameters:**
-      * Navigate to the line starting with "Linux" using arrow keys.
-      * Change the "ro" (read-only) parameter to "rw" (read-write).
-      * Append `init=/bin/bash` to the end of this line. This will boot the system directly into a root bash shell.
-      * **Case Sensitivity:** Ensure all commands and parameters are typed in lowercase.
-4.  **Boot into Modified System:** Press `Ctrl + X` or `F10` to boot with the modified parameters. You will be presented with a root bash prompt.
-5.  **Change the Password:**
-      * At the bash prompt, type `passwd [username]` (e.g., `passwd kali`).
-      * Enter and re-enter your new password when prompted. Characters will not be echoed for security.
-6.  **Reboot the System:** After successfully setting the new password, type `reboot -f` to forcefully restart the system.
-7.  **Login with New Password:** The system will restart, and you can now log in using the password you just set.
